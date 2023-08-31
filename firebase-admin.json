@@ -1,0 +1,15 @@
+{
+  "type": "service_account",
+  "project_id": "fred-gaetan-location",
+  "private_key_id": "9c458f623a5b5f2eeb8ccce9fbc16f12c9f5b0d7",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDOrIPfX8xQe4vR\ntSjUoMSHy4o8uipleQIutPd1adK/QLMtclkI0+JnOCf1GL51g8mO5Kbb7u3G2wmg\nGaqmeqekKc6RS8FYmNl1kVQTUwpy0sNQgf0MZZGacxibFZAdxHouje7QxV9QZm4A\nOzDPZSqAs8+ZX4ohJuZfYbIebUZGFk3O2rXeai1HCT1A9Hf3o0g8U6EdkHvMaxUg\n0YWhsZXUpM9wgJos3pqu+J63pvr6zQNDUM+V/8Um+co8MhKy209o0DatJpREJL7Y\nm5E4nbq936TXTHDJL+Vp9DWEKUa09nXkasTP6LgJsnPqf10F00Y7mybw0bFeW3dP\nkZEedhjzAgMBAAECggEAQWjFBb2WdsRbIIAyz3SgLpAjDIwo3duZ7rlUdiMLUX9D\nFfeSKSKSDXPu5Xmy0ZNnh6NjEclBFMX++l4VLcI061ZV65MruoQJktVvY/xMmsGM\nkh7JvRIqLlUN7Qs6hMlJmBFQi19kBpicaNNS49iTRo9h/RsJJuveTkKnskyISKa1\nQxt0X5a6A8TMCdm3b7QWxDP9KKwx0wziAFgylZmoLvrXZBm8/XA7TT3ql0ggNNXP\nWcO+RWj6dfcMvxJXHKzB6Upo9oDsiDO/OXmlI1PAeEVJV7k2d7iBG6mgHgUGaE8U\neuaMfdg51BytwIzH8yPePvBHAzK9T7rwYyWcRUe0kQKBgQD7ogNdvFAbma2QdV5d\nHA+SRvmaE/6iCwEsUNAMlm6APrASsDMgSVvCt87Ekf93XDhZwDoAHu3iKhlvMolT\nbpsU873yizeEL3OYSU79f9frUdhnrN4K12Vy8gsbmwOebkSDfgKA2VNhwWR8Nqt4\nY4tu+liUz2YZsTfj5CESTo8KsQKBgQDSQsCg2ROmVERLb8F10n4f0MvmdSXfhDLx\nH1DKy+F9SogAl4i5h7fIjNZO9yuQ0GA93eprpnMETovDq0HYouAkQ9u0ErRntEUJ\nyXCMLk+PZtKiWtZkmZk3JH9o5OfdsKFP2c1gNDZkFU/TqOkSmqrol5ty913ZXoCe\nHQJ4UkT+4wKBgQDoLYcZmEX6EYRaRFF7bAbaG273QfezIKBGeZJd6veukSj5NWcX\nJVjrg5nfOi8TvR2pgnqB3gf0pI+vUFvxhZ7GaFgdUWM6LmZkX0/pC2r5EB2zG4gN\nTM2oj7i8Ef320xuYkE5TATO0gTLsga0ZehAPqCLPu8Yjcqd1OOti7uWBIQKBgQCD\nU9pJHQ0e6Kc3jvgBBZZtfNa+fRFIyKOg43RtFmcjALht1jg52cE67Gy3Kb72VpCm\nU8OltXNFj2HQt1kLXMAvJotFsCEqXPh6Im2/wPVElm6dpasfbqi6PnuuIruIRlib\nLWkP28zVOlJ/25KoYh655GfdqQ/fQx2GpIv0Zz5dDQKBgEJ3cNw7gUQb2E74tLQh\npcOE0GAzVRkr3OCZjJP9BW67moE6G6YB5H3Qukg2Z6dIFI+6KYdm2yHxpPok7qM4\nrGCoqDEd0nd7XHMK1BKCSN0xtYIovlor8c8jPrNJsqCgXc+BTj+ScN8LcLgctaQo\n580QYgw+09m2mOYpiAKgNRbm\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-k2dyd@fred-gaetan-location.iam.gserviceaccount.com",
+  "client_id": "111542074241694072424",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-k2dyd%40fred-gaetan-location.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
+
+

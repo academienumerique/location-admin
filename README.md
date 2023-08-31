@@ -1,3 +1,16 @@
+# Avant d'uploader vers firebase
+Il faut transpiler le fichier relai.ts en relai.js
+tsc relai.ts
+pour cela on doit installer
+# npm install -g typescript
+
+# pour le systeme d'authentification ;
+Utilisation de Firebase Authentication et Firestore Security Rules :
+
+# Configurer Firebase Authentication et Firestore :
+ng add @angular/fire
+
+
 # LocationAdmin
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
