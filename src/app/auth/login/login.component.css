@@ -1,0 +1,83 @@
+/* Styles généraux de la page de connexion */
+.login-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  max-height: 80vh; /* Limite la hauteur du cadre */
+}
+
+/* Partie 1 : Se connecter */
+.login-header {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Partie 2 : Input Email et Mot de passe */
+.login-form .form-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.login-form label {
+  font-weight: bold;
+  display: block; /* Ajoutez ceci pour mettre chaque étiquette sur une nouvelle ligne */
+  margin-bottom: 5px; /* Espacement entre l'étiquette et le champ d'entrée */
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  transition: border-color 0.3s, color 0.3s; /* Ajoutez "color" à la transition */
+  display: block; /* Ajoutez ceci pour mettre chaque champ d'entrée sur une nouvelle ligne */
+  margin-bottom: 10px; /* Espacement entre les champs d'entrée */
+}
+
+.login-form input[type="email"]:focus {
+    border-color: #007bff;
+    color: #007bff; /* Changez la couleur du texte en bleu lorsqu'il est en focus */
+    outline: none;
+
+}
+.login-form input[type="password"]:focus {
+  border-color: #007bff;
+  color: #007bff; /* Changez la couleur du texte en bleu lorsqu'il est en focus */
+  outline: none;
+}
+
+/* Messages d'erreur */
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px; /* Espacement entre le champ et le message d'erreur */
+}
+
+/* Partie 3 : Bouton Google */
+.google-login-container {
+  margin-top: 20px;
+}
+
+.google-login {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.google-login:hover {
+  background-color: #357ae8;
+}

@@ -1,3 +1,36 @@
+# By Gaetan et fred - Help is welcome ⚡
+
+# Locpei.re 
+# Save Ce2 - Leave no trace
+
+# Système de gestion de location de materiels et de réservations d'activités
+# Louer plutôt qu'acheter
+
+# Site web : locpei.re
+# Site sous domaine : yourcompany/locapei.re
+
+# linkked : ....
+# X (ex twitter ) : ......
+
+# Développement
+# Firebase : back end include systeme d'authentification
+# Front end : angular
+
+# Installation - contact
+# whatsapp []:[
+#  { Gaetan : +262 06 93 83 21 21  };
+#  { fred : +262 06 92 74 29 58 }
+# ]
+
+
+
+
+
+
+
+ 
+
+
 # Avant d'uploader vers firebase
 Il faut transpiler le fichier relai.ts en relai.js
 tsc relai.ts
@@ -6,10 +39,15 @@ pour cela on doit installer
 
 # pour le systeme d'authentification ;
 Utilisation de Firebase Authentication et Firestore Security Rules :
+npm install firebase@latest @angular/fire@latest
+
+# pour le systeme d'authentification tes;
+admin@gmail.com
+mot depasse : 123456
+
 
 # Configurer Firebase Authentication et Firestore :
 ng add @angular/fire
-
 
 # LocationAdmin
 
