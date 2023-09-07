@@ -1,10 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: Lexend;
-}
+    font-family: Inter;
+  }
+  
+  :root {
+    --clr-main-dark: #0f172a;
+    --clr-main-light: #1E293B;
+    --clr-background: #ffffff;
+    --clr-accent: #4f46e5;
+    --clr-grey-dark: #94a3b8;
+    --clr-grey-light: #F1F6F9;
+  }

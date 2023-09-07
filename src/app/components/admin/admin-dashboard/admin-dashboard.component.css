@@ -1,151 +1,208 @@
-/* Styles pour la classe dashboard */
-.dashboard {
+
+
+/* Containers */
+
+.layout {
+  width: 100%;
   display: flex;
-  height: 100%;
 }
-/* Styles pour la partie gauche */
-.left-section {
-  flex: 1;
-  max-width: 400px;
-  background-color: black;
+
+.sidebar {
+  width: 280px;
+  min-height: 100vh;
+  overflow: auto;
+  background-color: var(--clr-main-dark);
+  padding: 12px;
+}
+
+.page {
+  width: calc(100vw - 280px);
+}
+
+/* Components */
+
+.sidebar-pic {
+  width: 96px;
+  height: 96px;
+  border-radius: 96px;
+  background-color: #4f46e5;
+  margin: 24px auto;
+}
+
+.sidebar-image {
+  border-radius: 96px;
+}
+
+.sidebar-name {
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  display: block;
+  margin-bottom: 6px;
 }
 
-/* Première section avec une hauteur fixe en haut */
-.left-top-section {
-  height: 100px;
-  padding: 20px; /* Ajoutez ici la marge intérieure souhaitée */
-  /* Ajoutez d'autres styles au besoin */
+.sidebar-email {
+  color: var(--clr-grey-dark);
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  display: block;
+  margin-bottom: 48px;
 }
 
-/* Deuxième section ajustable */
-.left-middle-section {
-  flex-grow: 1;
-  overflow: auto; /* Ajoutez une barre de défilement si nécessaire */
-  /* Ajoutez d'autres styles au besoin */
+.sidebar-title {
+  color: #818cf8;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 12px;
 }
 
-/* Styles pour la classe menu-item (pour aligner icon et item-value sur la même ligne) */
-.left-middle-section-menu-item {
+.sidebar-item {
+  transition: .1s ease;
   display: flex;
   align-items: center;
-  /* Ajoutez ici d'autres styles si nécessaire */
-  cursor: pointer; /* Change le curseur pour indiquer que l'élément est cliquable */
-  transition: opacity 0.3s;
-  width:100%;
-  border-radius: 0.375rem;
-}
-
-/* Styles pour le survol de menu-item */
-.left-middle-section-menu-item:hover {
-  opacity: 0.8; /* Couleur de fond au survol */
-}
-
-/* Styles pour le clic de menu-item */
-.left-middle-section-menu-item.clicked {
-  opacity: 0.8;  /* Couleur de fond au clic */
-}
-
-
-/* Styles pour la classe icon */
-.left-middle-section-icon {
-  width: 30px; /* Largeur fixe de 30px */
-  /* Ajoutez ici d'autres styles si nécessaire */
-}
-
-/* Styles pour la classe item-value (occupera le reste de la largeur) */
-.left-middle-section-item-value {
-  flex-grow: 1; /* Occupe toute la largeur disponible */
-  /* Ajoutez ici d'autres styles si nécessaire */
-}
-
-/* Troisième section avec une hauteur fixe en bas */
-.left-bottom-section {
-  height: 100px;
-  padding: 20px; /* Ajoutez ici la marge intérieure souhaitée */
-  /* Ajoutez d'autres styles au besoin */
-}
-
-
-/* Styles pour la partie gauche réduite */
-.left-section.reduced {
-  width: 50px; /* Largeur réduite souhaitée */
-  max-width: 50px; /* Limite également la largeur maximale lorsque réduite */
-  overflow: hidden; /* Masque le contenu dépassant de la partie gauche réduite */
-  white-space: nowrap; /* Empêche le texte de passer à la ligne */
-}
-
-/* Icône de réduction */
-.icon {
+  padding: 8px 16px;
+  border-radius: 5px;
+  margin-bottom: 4px;
   cursor: pointer;
-  float: right;
-  /* Ajoutez ici votre style d'icône, par exemple : */
-  /* font-size: 24px; */
-  /* color: white; */
 }
 
-/* Styles pour la partie droite */
-.right-section {
-  flex: 2;
-  background-color: white;
-  color: black;
-  padding: 20px;
+.sidebar-item-figure {
+  width: 24px;
+  height: 24px;
+}
+
+.sidebar-item-text {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  padding-left: 12px;
+}
+
+.sidebar-item:hover {
+  background-color: #2c3344;
+}
+
+.sidebar-selected {
+  background-color: #2c3344;
+
+}
+
+/* Content Topbar */
+
+.topbar {
+  width: 100%;
+  height: 64px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #F1F6F9;
+  box-shadow: 2px 0 2px 1px #0f172a10;
+  padding: 0 24px;
 }
 
-/* Première partie en haut de 60px */
-.right-top-section {
-  height: 60px;
-  /* Ajoutez ici la marge intérieure souhaitée */
-  /* Ajoutez d'autres styles au besoin */
+.topbar-icon {
+  width: 40px;
+  border-radius: 40px;
+  height: 40px;
+  background-color: #F1F6F9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
-/* Deuxième partie qui prend toute la hauteur restante */
-.right-bottom-section {
-  flex-grow: 1;
-  overflow: auto; /* Ajoutez une barre de défilement si nécessaire */
-  /* Ajoutez ici la marge intérieure souhaitée */
-  /* Ajoutez d'autres styles au besoin */
+/* Content Header */
+
+.content-header {
+  margin: 64px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content-header-title {
+  color:  #1e293b;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.content-header-subtitle {
+  color:  #1e293b;
+  font-size: 16px;
+  color: var(--clr-grey-dark);
+  font-weight: 500;
+  padding-left: 6px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.content-header-textblock {
+  padding: 0 24px;
+}
+
+.content-header-left {
+  width: calc(100% - 250px);
+  min-width: 250px;
+  display: flex;
+  align-items: center;
+}
+
+.content-header-right {
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  height: fit-content;
+  justify-content: space-around;
+}
+
+.message-button {
+  width: fit-content;
+  background-color: var(--clr-main-dark);
+  border-radius: 100px;
+  padding: 12px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+
+.message-button-text, .setting-button-text  {
+  padding-left: 6px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 0;
+}
+
+.setting-button {
+  width: fit-content;
+  background-color: var(--clr-accent);
+  border-radius: 100px;
+  padding: 12px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+
+@media screen and (max-width: 960px) {
+  .sidebar {
+      display: none;
+  }
+  .page {
+      width: 100%;
+  }
 }
 
 
+.sidebar.reduced {
+  display: none;
+}
 
-
-
-
-/* Styles pour la table */
-.container {
-    margin: 20px;
-  }
-  
-  .table {
-    width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-  
-  .table th, .table td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  .table th {
-    background-color: #f2f2f2;
-  }
-  
-  /* Styles pour la liste de photos */
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    margin: 5px 0;
-  }
-  
+.page.full {
+  width: 100%;
+}
