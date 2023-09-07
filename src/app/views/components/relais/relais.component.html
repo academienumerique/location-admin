@@ -1,0 +1,25 @@
+<table *ngIf="data$" class="table">
+    <thead>
+      <!-- En-têtes de colonnes (adaptées à votre modèle de données) -->
+      <tr>
+        <th>Colonne 1</th>
+        <th>Colonne 2</th>
+        <!-- Ajoutez d'autres en-têtes au besoin -->
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Itération sur les données pour afficher chaque élément -->
+      <tr div *ngFor="let data of data$ | async">
+        <td>{{ data.id }}</td>
+        <td>{{ data.name }}</td>
+        <!-- Affichez d'autres propriétés de l'élément au besoin -->
+      </tr>
+    </tbody>
+  </table>
+
+          <!-- Utilisez collectionData$ pour afficher les éléments de la collection -->
+        <!--
+          <div *ngFor="let data of data$ | async">
+            {{ data.id }} | {{ data.name }}
+          </div>
+        -->
