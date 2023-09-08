@@ -2,15 +2,19 @@
     <thead>
       <!-- En-têtes de colonnes (adaptées à votre modèle de données) -->
       <tr>
-        <th *ngFor=" let column of displayedColumns"></th>
+        <th>id</th>
+        <th>Name</th>
+        <th>Texte</th>
+        <!-- Ajoutez d'autres en-têtes au besoin -->
       </tr>
     </thead>
     <tbody>
       <!-- Itération sur les données pour afficher chaque élément -->
-      <tr *ngFor="let data of data$ | async">
+      <tr div *ngFor="let data of data$ | async">
         <td>{{ data.id }}</td>
         <td>{{ data.name }}</td>
-        <!-- Affichez d'autres propriétés de l'élément au besoin -->
+        <td>{{ data.text }}</td>
+            <!-- Affichez d'autres propriétés de l'élément au besoin -->
       </tr>
     </tbody>
   </table>

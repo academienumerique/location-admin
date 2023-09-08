@@ -62,14 +62,15 @@
         </div>
       </div>
 
-      <div *ngIf="selectedCollection">
         <div *ngIf="selectedCollection">
           <ng-container [ngSwitch]="selectedCollection">
             <app-relais *ngSwitchCase="'relais'"></app-relais>
             <app-companies *ngSwitchCase="'companies'"></app-companies>
+            <app-products *ngSwitchCase="'products'"></app-products>
+            <app-configurations *ngSwitchCase="'configurations'"></app-configurations>
+            
           </ng-container>
         </div>
-      </div>
 
     </div>
 

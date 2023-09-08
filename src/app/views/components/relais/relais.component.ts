@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class RelaisComponent implements OnInit{
   data$!: Observable<relai[]>;
+  displayedColumns : string[] =['id','name'];
 
   constructor(private databaseService: DatabaseService) {}
 

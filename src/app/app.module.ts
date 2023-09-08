@@ -18,6 +18,8 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { environment } from '../environments/environment';
 import { RelaisComponent } from './views/components/relais/relais.component';
 import { CompaniesComponent } from './views/components/companies/companies.component';
+import { ProductsComponent } from './views/components/products/products.component';
+import { ConfigurationsComponent } from './views/components/configurations/configurations.component';
 
 
 @NgModule({
@@ -28,6 +30,8 @@ import { CompaniesComponent } from './views/components/companies/companies.compo
     LoginComponent,
     RelaisComponent,
     CompaniesComponent,
+    ProductsComponent,
+    ConfigurationsComponent,
   ],
   imports: [
     BrowserModule,
