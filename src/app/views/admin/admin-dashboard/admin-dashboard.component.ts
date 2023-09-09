@@ -12,9 +12,10 @@ export class AdminDashboardComponent implements OnInit {
   data$: Observable<any[]> = new Observable<any[]>(); // Initialisation dans le constructeur
   //collectionNames$: Observable<any[]> = new Observable<any[]>();
   /* gestion du tableau de bord */
+  selectedCollection: string = ''; // Initialisez la collection sélectionnée à vide
+  selectedMenu: string = ''; // Initialisez la collection sélectionnée à vide
   isReduced: boolean = false;
   itemMenu$: Observable<any[]> = new Observable<any[]>();
-  selectedCollection: string = ''; // Initialisez la collection sélectionnée à vide
   collectionName: any[] =[]; // Les données récupérées
 
   constructor(private databaseService: DatabaseService) {
@@ -58,14 +59,18 @@ export class AdminDashboardComponent implements OnInit {
    toggleLeftSection() {
     this.isReduced = !this.isReduced;
   }
+  selectMenu( item : string){
+    this.selectedMenu = item;
+    this.selectedCollection = '';
+  }
   selectCollection(indexmenu: number , collection: string) {
+    this.selectedMenu = ''; /* on annule les autres choix du menu -*/
     this.collectionName.forEach((item) => {
       item.selected = false; // Mettez le premier élément à true, sinon false
     });
     this.collectionName[indexmenu].selected = true
     this.selectedCollection = collection;
     // Chargez les données de la collection sélectionnée à partir de Firebase
-    console.log(this.selectedCollection)
     this.data$ = this.databaseService.getAllItems(this.selectedCollection);
   }
 }

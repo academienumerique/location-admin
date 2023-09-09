@@ -19,10 +19,15 @@
       </div>
       <span class="sidebar-item-text" >{{menu.namemenu}}</span>
     </div>
+      <!-- Suite du menu -->
+      <div class="sidebar-item" (click)="selectMenu('calendar')">
+        <div class="sidebar-item-figure" >
+          <img src="../../../../assets/icons/icon-companies.svg" alt="Mon SVG" width="24" height="24">
+        </div>
+        <span class="sidebar-item-text" >'Calendrier'</span>
+      </div>
   </div>
-
   <div class="page" [ngClass]="{'full': isReduced}">
-
     <!-- Contenu de l'en tete -->
     <div class="topbar">
       <div class="topbar-icon" (click)="toggleLeftSection()">
@@ -69,6 +74,11 @@
             <app-products *ngSwitchCase="'products'"></app-products>
             <app-configurations *ngSwitchCase="'configurations'"></app-configurations>
             
+          </ng-container>
+        </div>
+        <div *ngIf="selectedMenu">
+          <ng-container [ngSwitch]="selectedMenu">
+            <app-calendar *ngSwitchCase="'calendar'"></app-calendar>
           </ng-container>
         </div>
 

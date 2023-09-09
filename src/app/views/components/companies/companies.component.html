@@ -1,21 +1,28 @@
 <table *ngIf="data$ !== null" class="table">
-    <thead>
-      <!-- En-têtes de colonnes (adaptées à votre modèle de données) -->
-      <tr>
-        <th>Adresse</th>
-        <th>Id</th>
-        <th>Name</th>
-        <!-- Ajoutez d'autres en-têtes au besoin -->
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Itération sur les données pour afficher chaque élément -->
-      <tr *ngFor="let item of data$ | async">
-        <td>{{ item.address }}</td>
-        <td>{{ item.id }}</td>
-        <td>{{ item.name }}</td>
-        <!-- Affichez d'autres propriétés de l'élément au besoin -->
-      </tr>
-    </tbody>
-  </table>
-
+  <thead>
+    <!-- En-têtes de colonnes (adaptées à votre modèle de données) -->
+    <tr>
+      <th>ID</th>
+      <th>Adresse</th>
+      <th>Nom</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Itération sur les données pour afficher chaque élément -->
+    <tr *ngFor="let item of data$ | async">
+      <td>{{ item.id }}</td>
+      <td>{{ item.address }}</td>
+      <td>{{ item.name }}</td>
+      <td class="table-row-actions">
+        <div class="icon-edit-container">
+          <img width="16px" height="16px" src="./assets/icons/icon-edit.svg"
+            alt="edit">
+         </div>
+        <div class="icon-delete-container">
+          <img width="16px" height="16px" src="./assets/icons/icon-delete.svg"
+            alt="delete"></div>
+      </td>
+    </tr>
+  </tbody>
+</table>

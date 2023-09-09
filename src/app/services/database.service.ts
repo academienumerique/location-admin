@@ -27,7 +27,8 @@ export class DatabaseService {
   }
 
   /* Efface tous les champs qui ont par exemple name ='fred' */
-  deleteItemByField(collectionName: string, fieldName: string, fieldValue: any): Promise<void> {
+  deleteItemByField(collectionName: string, fieldName: string, fieldValue: any): Promise<void>
+   {
     const collection = this.getCollection(collectionName);
 
     // Recherchez les documents correspondant au champ spécifié

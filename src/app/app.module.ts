@@ -20,7 +20,8 @@ import { RelaisComponent } from './views/components/relais/relais.component';
 import { CompaniesComponent } from './views/components/companies/companies.component';
 import { ProductsComponent } from './views/components/products/products.component';
 import { ConfigurationsComponent } from './views/components/configurations/configurations.component';
-
+import { CalendarComponent } from './views/components/calendar/calendar.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ConfigurationsComponent } from './views/components/configurations/confi
     CompaniesComponent,
     ProductsComponent,
     ConfigurationsComponent,
-  ],
+    CalendarComponent,
+      ],
   imports: [
     BrowserModule,
     CommonModule,
@@ -43,6 +45,7 @@ import { ConfigurationsComponent } from './views/components/configurations/confi
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireAuthModule,
+    FullCalendarModule
   ],
   providers: [AngularFireAuth],
   bootstrap: [AppComponent]

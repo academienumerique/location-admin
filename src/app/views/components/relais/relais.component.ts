@@ -17,5 +17,12 @@ export class RelaisComponent implements OnInit{
   ngOnInit(){
     this.data$ = this.databaseService.getAllItems('relais');
   }
+
+  AddItem(){
+    this.databaseService.addItem('relais', {id : '4' , name : 'Saint Gilles' })
+  }
+  effaceItem(id : number){
+    this.databaseService.deleteItemByField('relais','id',id)
+  }
 }
 
