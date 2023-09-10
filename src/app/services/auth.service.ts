@@ -14,10 +14,10 @@ export class AuthService {
   }
 
   // Méthode pour s'authentifier avec Gmail
-  loginWithGoogle() {
-    return this.afAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+//  loginWithGoogle() {
+ //   return this.afAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
 // Importez firebase comme indiqué ci-dessous
-  }
+  
 
   // Méthode pour se déconnecter
   logout() {

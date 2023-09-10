@@ -12,8 +12,9 @@
   --clr-main-light: #1E293B;
   --clr-background: #ffffff;
   --clr-accent: #4f46e5;
-  --clr-grey-dark: #94a3b8;
+  --clr-grey-dark: #64748B;
   --clr-grey-light: #F1F6F9;
+  --clr-error : #DE3A3A;
 }
 
 /* Tables */
@@ -69,5 +70,17 @@ tbody tr:hover {
   height: 28px;
   background-color: var(--clr-accent);
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.cta {
+  padding: 12px 16px;
+  border: 0;
+  outline: 0;
+  border-radius: 4px;
+  color: white;
+  background-color: var(--clr-accent);
+  font-size: 15px;
+  font-weight: 500;
   cursor: pointer;
 }

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -16,7 +18,7 @@ export class LoginComponent {
 
   isSubmitted = false;
 
-  constructor(private authService: AuthService, private fb: FormBuilder) {}
+  constructor(private authService: AuthService, private fb: FormBuilder, private router: Router) {}
 
   onSubmit() {
     this.isSubmitted = true;
@@ -29,8 +31,9 @@ export class LoginComponent {
           this.authService.login(email, password)
             .then(() => {
               // Redirection vers la page du tableau de bord après une connexion réussie
-              // Vous pouvez utiliser le routeur Angular pour cela.
-              console.log('Connexion réussie');
+              // Redirection vers la page du tableau de bord après une connexion réussie
+              this.router.navigate(['/dashboard']);
+              console.log('connexion reussit')
             })
             .catch((error) => {
               console.error('Erreur de connexion :', error);
@@ -39,17 +42,4 @@ export class LoginComponent {
           }
     }
   }
-
-  // Méthode appelée lorsque le bouton "Login avec Google" est cliqué
-  loginWithGoogle() {
-    this.authService.loginWithGoogle()
-      .then(() => {
-        // Gestion de la réussite de la connexion avec Google ici (redirection, etc.)
-      })
-      .catch((error) => {
-        // Gestion des erreurs ici
-        console.error('Erreur de connexion avec Google :', error);
-      });
-  }
 }
-

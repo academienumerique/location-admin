@@ -22,6 +22,10 @@ import { ProductsComponent } from './views/components/products/products.componen
 import { ConfigurationsComponent } from './views/components/configurations/configurations.component';
 import { CalendarComponent } from './views/components/calendar/calendar.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -29,11 +33,11 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     AdminDashboardComponent,
     NavbarComponent,
     LoginComponent,
-    RelaisComponent,
     CompaniesComponent,
     ProductsComponent,
     ConfigurationsComponent,
     CalendarComponent,
+    RelaisComponent
       ],
   imports: [
     BrowserModule,
@@ -45,7 +49,9 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireAuthModule,
-    FullCalendarModule
+    FullCalendarModule,
+    BrowserAnimationsModule,
+    MatDialogModule    
   ],
   providers: [AngularFireAuth],
   bootstrap: [AppComponent]

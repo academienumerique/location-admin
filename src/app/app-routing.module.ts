@@ -4,9 +4,9 @@ import { LoginComponent } from './auth/login/login.component';
 import { AdminDashboardComponent } from './views/admin/admin-dashboard/admin-dashboard.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent }, // Page de connexion comme page d'accueil
- // { path: 'dashboard', component: AdminDashboardComponent, canActivate: [AuthGuard] },
-  // Ajoutez d'autres routes ici
+  { path: 'login', component: LoginComponent },
+  { path: '', component: LoginComponent},
+  { path: 'dashboard', component: AdminDashboardComponent, /* ajouter middleware auth */ }
 ];
 
 
