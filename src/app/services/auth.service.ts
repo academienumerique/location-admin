@@ -13,11 +13,10 @@ export class AuthService {
     return this.afAuth.signInWithEmailAndPassword(email, password);
   }
 
-  // Méthode pour s'authentifier avec Gmail
-//  loginWithGoogle() {
- //   return this.afAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
-// Importez firebase comme indiqué ci-dessous
-  
+  // Méthode pour s'inscrire avec un email et un mot de passe
+  register(email: string, password: string) {
+    return this.afAuth.createUserWithEmailAndPassword(email, password);
+  }
 
   // Méthode pour se déconnecter
   logout() {

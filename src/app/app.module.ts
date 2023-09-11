@@ -7,7 +7,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdminDashboardComponent } from './views/admin/admin-dashboard/admin-dashboard.component';
 import { NavbarComponent } from './views/shared/navbar/navbar.component';
-import { LoginComponent} from './auth/login/login.component'
+
+import { LoginComponent} from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { LoginRegisterComponent } from './auth/login-register/login-register.component';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
@@ -25,6 +28,8 @@ import { FullCalendarModule } from '@fullcalendar/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTabsModule } from '@angular/material/tabs'; // Importez MatTabsModule depuis '@angular/material/tabs'
 
 
 @NgModule({
@@ -33,6 +38,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     AdminDashboardComponent,
     NavbarComponent,
     LoginComponent,
+    RegisterComponent,
+    LoginRegisterComponent,
     CompaniesComponent,
     ProductsComponent,
     ConfigurationsComponent,
@@ -51,7 +58,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     AngularFireAuthModule,
     FullCalendarModule,
     BrowserAnimationsModule,
-    MatDialogModule    
+    MatDialogModule,
+    MatButtonModule,
+    MatTabsModule    
   ],
   providers: [AngularFireAuth],
   bootstrap: [AppComponent]

@@ -1,1 +1,50 @@
-<p>register works!</p>
+<div class="login-container">
+
+  <div class="login-left">
+    <!-- Affichage du message d'erreur -->
+    <div class="login-form">
+      <div *ngIf="errorMessage" class="error-message">
+       <div> {{ errorMessage }}</div> 
+       <div>
+        <button mat-button color="accent" (click)="redirectToLogin()">Accéder à la page connexnion</button></div>
+      </div>
+      <h1 class="login-title">Inscription</h1>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="email" class="login-form-label">Adresse e-mail</label>
+          <input type="email" id="email" name="email" class="login-form-input" formControlName="email"
+                 [class.invalid]="registerForm.get('email')?.invalid && (registerForm.get('email')?.touched || isSubmitted)">
+          <div *ngIf="registerForm.get('email')?.hasError('required') && (registerForm.get('email')?.touched || isSubmitted)"
+               class="error-message">
+            Ce champ est requis
+          </div>
+          <div *ngIf="registerForm.get('email')?.hasError('email') && (registerForm.get('email')?.touched || isSubmitted)"
+               class="error-message">
+            Format d'e-mail non valide
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password" class="login-form-label">Mot de passe</label>
+          <input type="password" id="password" name="password" class="login-form-input" formControlName="password"
+                 [class.invalid]="registerForm.get('password')?.invalid && (registerForm.get('password')?.touched || isSubmitted)">
+          <div *ngIf="registerForm.get('password')?.hasError('required') && (registerForm.get('password')?.touched || isSubmitted)"
+               class="error-message">
+            Ce champ est requis
+          </div>
+          <div *ngIf="registerForm.get('password')?.hasError('minlength') && (registerForm.get('password')?.touched || isSubmitted)"
+               class="error-message">
+            Le mot de passe doit contenir au moins 6 caractères
+          </div>
+        </div>
+        <input type="submit" value="S'inscrire" class="login-cta">
+      </form>
+    </div>
+  </div>
+
+  <div class="login-right">
+    <img class="login-thumbnail" src="./assets/frontend/login-bg.webp" alt="">
+  </div>
+</div>
+
+
+  

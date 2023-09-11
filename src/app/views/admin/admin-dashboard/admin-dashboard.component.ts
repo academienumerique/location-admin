@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, of, switchMap } from 'rxjs';
 import { DatabaseService } from '../../../services/database.service'; // Assurez-vous d'importer correctement le service
+import { AuthService} from '../../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -18,7 +20,9 @@ export class AdminDashboardComponent implements OnInit {
   itemMenu$: Observable<any[]> = new Observable<any[]>();
   collectionName: any[] =[]; // Les données récupérées
 
-  constructor(private databaseService: DatabaseService) {
+  constructor(private databaseService: DatabaseService ,
+             private auth : AuthService,
+             private router: Router) {
       } // Injection du service
 
   ngOnInit() {
@@ -73,5 +77,11 @@ export class AdminDashboardComponent implements OnInit {
     // Chargez les données de la collection sélectionnée à partir de Firebase
     this.data$ = this.databaseService.getAllItems(this.selectedCollection);
   }
+// logout 
+logout() {
+  this.auth.logout();
+  this.router.navigate(['/login-register']);
+}
+
 }
 
