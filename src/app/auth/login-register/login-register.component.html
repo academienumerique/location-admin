@@ -1,9 +1,21 @@
-<mat-tab-group>
-    <mat-tab label="Connexion">
-        <app-login></app-login>
-    </mat-tab>
-    <mat-tab label="Inscription">
-        <app-register></app-register>
-    </mat-tab>
-</mat-tab-group>
+ 
+<div class="login-container">
+
+    <div class="login-left">
   
+      <!-- Partie 1 : Se connecter -->
+      <mat-tab-group>
+        <mat-tab label="Connexion">
+            <app-login></app-login>
+        </mat-tab>
+        <mat-tab label="Inscription">
+            <app-register></app-register>
+        </mat-tab>
+    </mat-tab-group>
+      
+    </div>
+  
+    <div class="login-right">
+      <img class="login-thumbnail" src="./assets/frontend/login-bg.webp" alt="">
+    </div>
+  </div>

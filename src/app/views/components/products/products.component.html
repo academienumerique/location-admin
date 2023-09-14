@@ -1,1 +1,20 @@
-<p>products works!</p>
+<div>
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <label for="productName">Nom du produit :</label>
+    <input type="text" id="productName" formControlName="productName" required>
+    <div *ngIf="productForm.get('productName')?.hasError('required') && productForm.get('productName')?.touched">
+
+    </div>
+
+    <label for="productImage">Image du produit :</label>
+    <input type="file" id="productImage" formControlName="productImage"  (change)="onImageSelected($event)" accept="image/*" required>
+    <div *ngIf="productForm.get('productImage')?.hasError('required') && productForm.get('productImage')?.touched">
+      Vous devez sélectionner une image.
+    </div>
+    <!--button type="submit" [ngClass]="{'disabled-element': !productForm.valid}">Ajouter le produit</button> -->
+    <button type="submit" [disabled]="!productForm.valid">Ajouter le produit</button>
+  </form>
+</div>
+
+
+  

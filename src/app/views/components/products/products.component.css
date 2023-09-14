@@ -1,0 +1,5 @@
+.disabled-element {
+    opacity: 0.6; /* Réduit l'opacité pour indiquer que l'élément est désactivé */
+    pointer-events: none; /* Empêche les événements de souris sur l'élément */
+    /* Autres styles de votre choix pour les éléments désactivés */
+  }
