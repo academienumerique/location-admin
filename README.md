@@ -22,6 +22,7 @@
 #  { fred : +262 06 92 74 29 58 }
 # ]
 
+# tsc .\src\assets\files\product.ts
 
 
 

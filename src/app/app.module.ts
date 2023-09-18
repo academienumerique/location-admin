@@ -10,7 +10,7 @@ import { NavbarComponent } from './views/shared/navbar/navbar.component';
 
 import { LoginComponent} from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
-import { LoginRegisterComponent } from './auth/login-register/login-register.component';
+import { AuthentificationComponent } from './auth/authentification/authentification.component';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
@@ -32,6 +32,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs'; // Importez MatTabsModule depuis '@angular/material/tabs'
 
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { MatTabsModule } from '@angular/material/tabs'; // Importez MatTabsModul
     NavbarComponent,
     LoginComponent,
     RegisterComponent,
-    LoginRegisterComponent,
+    AuthentificationComponent,
     CompaniesComponent,
     ConfigurationsComponent,
     CalendarComponent,
@@ -61,7 +62,8 @@ import { MatTabsModule } from '@angular/material/tabs'; // Importez MatTabsModul
     BrowserAnimationsModule,
     MatDialogModule,
     MatButtonModule,
-    MatTabsModule    
+    MatTabsModule,
+    ToastrModule.forRoot()   
   ],
   providers: [AngularFireAuth],
   bootstrap: [AppComponent]

@@ -38,7 +38,7 @@ export class RelaisComponent implements OnInit {
     });
   }
 
-  effaceItem(id: number) {
+  deleteItem(id: number) {
     this.databaseService.deleteItemByField('relais', 'id', id);
   }
 }

@@ -1,20 +1,57 @@
 <div>
-  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
-    <label for="productName">Nom du produit :</label>
-    <input type="text" id="productName" formControlName="productName" required>
-    <div *ngIf="productForm.get('productName')?.hasError('required') && productForm.get('productName')?.touched">
-
+  <!-- Ajout-->
+  <div>
+    <div>
+      <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+        <label for="productName">Nom du produit :</label>
+        <input type="text" id="productName" formControlName="productName" required>
+        <div *ngIf="productForm.get('productName')?.hasError('required') && productForm.get('productName')?.touched">
+    
+        </div>
+    
+        <label for="productImage">Image du produit :</label>
+        <input type="file" id="productImage" formControlName="productImage"
+               (change)="onImageSelected($event)" accept="image/*" required> 
+        <div *ngIf="productForm.get('productImage')?.hasError('required') && productForm.get('productImage')?.touched">
+          Vous devez sélectionner une image.
+        </div>
+        <!--button type="submit" [ngClass]="{'disabled-element': !productForm.valid}">Ajouter le produit</button> -->
+        <button type="submit" [disabled]="!productForm.valid">Ajouter le produit</button>
+      </form>
     </div>
-
-    <label for="productImage">Image du produit :</label>
-    <input type="file" id="productImage" formControlName="productImage"  (change)="onImageSelected($event)" accept="image/*" required>
-    <div *ngIf="productForm.get('productImage')?.hasError('required') && productForm.get('productImage')?.touched">
-      Vous devez sélectionner une image.
+    <div *ngIf="imageIsLoading">
+        <img src={{image_Url}}  width="100px" height="auto">
     </div>
-    <!--button type="submit" [ngClass]="{'disabled-element': !productForm.valid}">Ajouter le produit</button> -->
-    <button type="submit" [disabled]="!productForm.valid">Ajouter le produit</button>
-  </form>
+  </div>
+  <!-- Liste -->
+  <div>
+      <table *ngIf="data$ !== null" class="table">
+        <thead>
+          <!-- En-têtes de colonnes (adaptées à votre modèle de données) -->
+          <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Itération sur les données pour afficher chaque élément -->
+          <tr *ngFor="let item of data$ | async ; let i = index">
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td class="table-row-actions">
+              <div class="icon-edit-container">
+                <img width="16px" height="16px" src="./assets/icons/icon-edit.svg"
+                  alt="modifier"
+                  (click)="editItem('salut')">
+              </div>
+              <div class="icon-delete-container">
+                <img width="16px" height="16px" src="./assets/icons/icon-delete.svg"
+                  alt="effacer" (click)="deleteItem( item.id )">
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
 </div>
-
-
-  
